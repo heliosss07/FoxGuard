@@ -1,0 +1,21 @@
+:root {
+    /* Background Colors */
+    --bg-primary: #050B18;
+    --bg-secondary: #0B1425;
+    --bg-tertiary: #111C31;
+
+    /* Text Colors */
+    --text-primary: #F5F7FB;
+    --text-secondary: #A6AFC0;
+
+    /* Border */
+    --border-color: #24324A;
+
+    /* Accent Colors */
+    --blue: #315CFF;
+    --purple: #7C3AED;
+    --orange: #FF6B00;
+    --teal: #55B8AA;
+    --red: #FF7676;
+    --yellow: #F1E69D;
+}
