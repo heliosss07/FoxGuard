@@ -53,3 +53,48 @@
 .nav-menu a:hover {
     color: var(--text-primary);
 }
+
+/* Footer */
+.footer {
+    background-color: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+    padding: 50px 0 24px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.footer-brand h3 {
+    color: var(--orange);
+    margin-bottom: 8px;
+}
+
+.footer-brand p {
+    color: var(--text-secondary);
+}
+
+.footer-links {
+    display: flex;
+    gap: 28px;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+}
+
+.footer-links a:hover {
+    color: var(--text-primary);
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border-color);
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
