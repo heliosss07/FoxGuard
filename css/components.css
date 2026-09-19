@@ -113,7 +113,7 @@
 }
 .module-card-content p {
     color: var(--text-secondary);
-    font-size: 10px;
+    font-size: 12px;
     line-height: 1.5;
     margin-bottom: 14px;
 }

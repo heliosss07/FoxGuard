@@ -98,13 +98,13 @@
 }
 
 .feature-card h3 {
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-md);
     margin-bottom: 7px;
 }
 
 .feature-card p {
     color: var(--text-secondary);
-    font-size: 9px;
+    font-size: 12px;
     line-height: 1.45;
 }
 
