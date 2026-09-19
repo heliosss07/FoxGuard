@@ -20,3 +20,36 @@
     border: 1px solid var(--border-color);
     color: var(--text-primary);
 }
+
+
+.header {
+    padding: 20px 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: var(--orange);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-menu a {
+    color: var(--text-secondary);
+    font-size: 15px;
+}
+
+.nav-menu a:hover {
+    color: var(--text-primary);
+}
