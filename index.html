@@ -11,27 +11,30 @@
     <link rel="stylesheet" href="css/components.css">
 </head>
 <body>
+    <!-- ==================== HEADER ==================== -->
     <header class="header">
         <div class="container">
             <nav class="navbar">
 
                 <a href="index.html" class="logo">
-                    FOXGUARD
+                    <img src="images/logo/FoxLogo.svg" alt="FoxGuard logo">
+                    <span>FOXGUARD</span>
                 </a>
 
                 <div class="nav-menu">
-                    <a href="index.html">Home</a>
-                    <a href="modules.html">Modules</a>
+                    <a href="index.html" class="active">Home</a>
+                    <a href="modules.html">Module</a>
                     <a href="about.html">About</a>
                 </div>
             </nav>
         </div>
     </header>
+    <!-- ==================== HERO ==================== -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>Learn Cybersecurity the Right Way</h1>
+                    <h1>Learn Cybersecurity <span>the Right Way</span></h1>
                     <p>
                         Build strong cybersecurity fundamentals through
                         simple lessons, practical examples, and guided learning.
@@ -54,108 +57,147 @@
             </div>
         </div>
     </section>
+    <!-- ==================== FEATURES ==================== -->
     <section class="features">
         <div class="container">
             <div class="section-heading">
                 <h2>Learn Cybersecurity Step by Step</h2>
                 <p>
-                    Build the knowledge and skills you need through structured learning.
+                    FoxGuard focuses on simple explanations, structured learning, and practical understanding.
                 </p>
             </div>
 
             <div class="features-grid">
-
-                <div class="feature-card">
+                <article class="feature-card">
+                        <div class="feature-icon">
+                            <!-- Graduation cap -->
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M3 9.5 12 5l9 4.5-9 4.5L3 9.5Z"></path>
+                                <path d="M7 12v4.5c2.8 2 7.2 2 10 0V12"></path>
+                                <path d="M21 10v5"></path>
+                            </svg>
+                        </div>
+                        <h3>Beginner Friendly</h3>
+                        <p>
+                            Learn cybersecurity fundamentals, concepts,
+                            and essential Linux commands.
+                        </p>
+                </article>
+                <article class="feature-card">
                     <div class="feature-icon">
-                        <img src="images/icons/your-icon.svg" alt="">
-                    </div>
-                    <h3>Beginner Friendly</h3>
-                    <p>Learn cybersecurity fundamentals, concepts, and Linux commands.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <img src="images/icons/your-icon.svg" alt="">
+                        <!-- Code -->
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="m8 8-4 4 4 4"></path>
+                            <path d="m16 8 4 4-4 4"></path>
+                            <path d="m14 4-4 16"></path>
+                        </svg>
                     </div>
                     <h3>Practical Examples</h3>
-                    <p>Learn through examples, exercises, and practical scenarios.</p>
-                </div>
-
-                <div class="feature-card">
+                    <p>
+                        Learn through examples, exercises,
+                        and practical cybersecurity scenarios.
+                    </p>
+                </article>
+                <!-- Feature 3 -->
+                <article class="feature-card">
                     <div class="feature-icon">
-                        <img src="images/icons/your-icon.svg" alt="">
+                        <!-- Shield -->
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 3 20 6v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-3Z"></path>
+                            <path d="m8.5 12 2.2 2.2 4.8-5"></path>
+                        </svg>
                     </div>
                     <h3>Structured Modules</h3>
-                    <p>Follow organized lessons and build your knowledge step by step.</p>
-                </div>
-
-                <div class="feature-card">
+                    <p>
+                        Follow organized lessons and build
+                        your knowledge step by step.
+                    </p>
+                </article>
+                <!-- Feature 4 -->
+                <article class="feature-card">
                     <div class="feature-icon">
-                        <img src="images/icons/your-icon.svg" alt="">
+                        <!-- Users -->
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="9" cy="8" r="3"></circle>
+                            <path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"></path>
+                            <path d="M16 5.5a3 3 0 0 1 0 5.8"></path>
+                            <path d="M18 14c1.7.9 3 2.8 3 5"></path>
+                        </svg>
                     </div>
                     <h3>For Everyone</h3>
-                    <p>Learn cybersecurity fundamentals regardless of your experience.</p>
-                </div>
-
+                    <p>
+                        Learn cybersecurity fundamentals regardless
+                        of your previous experience.
+                    </p>
+                </article>
             </div>
         </div>
     </section>
     <section class="featured-modules">
         <div class="container">
-
             <div class="section-heading">
                 <h2>Featured Modules</h2>
                 <p>
-                    Explore the cybersecurity topics you'll learn with FoxGuard.
+                    Start with the core skills every cybersecurity
+                    learner should understand.
                 </p>
             </div>
 
             <div class="modules-grid">
-
-                <div class="module-card">
-                    <img src="images/linux.png" alt="Linux">
+                <!-- Python -->
+                <article class="module-card">
+                    <img src="images/modules/python.jpg" alt="Python">
                     <div class="module-card-content">
-                        <h3>Linux Fundamentals</h3>
-                        <p>Learn the Linux basics used in cybersecurity.</p>
-                        <a href="course.html" class="btn btn-secondary">
-                            View Module
-                        </a>
+                        <div class="module-title">
+                            <h3>Python Fundamentals</h3>
+                            <span class="module-level beginner">
+                                Beginner
+                            </span>
+                        </div>
+                        <p>
+                            Learn programming fundamentals and
+                            Python concepts useful for cybersecurity.
+                        </p>
                     </div>
-                </div>
-
-                <div class="module-card">
-                    <img src="images/python.png" alt="Python">
+                </article>
+                <!-- Networking -->
+                <article class="module-card">
+                    <img src="images/modules/ccna.jpg" alt="Networking">
                     <div class="module-card-content">
-                        <h3>Python</h3>
-                        <p>Learn Python fundamentals for cybersecurity.</p>
-                        <a href="course.html" class="btn btn-secondary">
-                            View Module
-                        </a>
+                        <div class="module-title">
+                            <h3>Networking Basics</h3>
+                            <span class="module-level intermediate">
+                                Intermediate
+                            </span>
+                        </div>
+                        <p>
+                            Understand networking concepts,
+                            protocols, and how systems communicate.
+                        </p>
                     </div>
-                </div>
-
-                <div class="module-card">
-                    <img src="images/networking.png" alt="Networking">
+                </article>
+                <!-- Web Penetration -->
+                <article class="module-card">
+                    <img src="images/modules/burp-suite.png" alt="Web Penetration">
                     <div class="module-card-content">
-                        <h3>Networking</h3>
-                        <p>Understand the networking concepts behind cybersecurity.</p>
-                        <a href="course.html" class="btn btn-secondary">
-                            View Module
-                        </a>
+                        <div class="module-title">
+                            <h3>Web Penetration</h3>
+                            <span class="module-level advanced">
+                                Advanced
+                            </span>
+                        </div>
+                        <p>
+                            Learn fundamental concepts of
+                            web application security.
+                        </p>
                     </div>
-                </div>
+                </article>
+            </div>
 
-                <div class="module-card">
-                    <img src="images/web-security.png" alt="Web Security">
-                    <div class="module-card-content">
-                        <h3>Web Penetration</h3>
-                        <p>Learn fundamental concepts of web security.</p>
-                        <a href="course.html" class="btn btn-secondary">
-                            View Module
-                        </a>
-                    </div>
-                </div>
-
+            <div class="home-cta">
+                <a href="modules.html" class="btn btn-primary">
+                    Start Learning
+                </a>
             </div>
 
         </div>

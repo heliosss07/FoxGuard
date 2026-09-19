@@ -18,4 +18,20 @@
     --teal: #55B8AA;
     --red: #FF7676;
     --yellow: #F1E69D;
+
+    /* Typography */
+    --font-size-xs: 8px;
+    --font-size-sm: 10px;
+    --font-size-base: 12px;
+    --font-size-md: 14px;
+    --font-size-lg: 18px;
+    --font-size-xl: 24px;
+    --font-size-2xl: 36px;
+    --font-size-3xl: 42px;
+
+    /* Font Weights */
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
 }
