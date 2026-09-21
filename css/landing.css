@@ -63,33 +63,43 @@
 
 /* ==================== FEATURES ==================== */
 .features {
-    padding: 42px 0 48px;
+    padding: 55px 0 60px;
     background-color: var(--bg-white);
     color: #151C2B;
 }
 
+.features .section-heading {
+    margin-bottom: 34px;
+}
+
+.features .section-heading h2 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: 10px;
+}
+
 .features .section-heading p {
     color: #5F6675;
+    font-size: var(--font-size-sm);
 }
 
 .features-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    gap: 12px;
 }
 
 .feature-card {
-    min-height: 160px;
+    min-height: 180px;
     background-color: var(--bg-primary);
     border: 1px solid var(--border-color);
-    border-radius: 6px;
-    padding: 18px;
+    border-radius: 8px;
+    padding: 22px;
 }
 
 .feature-icon {
-    width: 38px;
-    height: 38px;
-    margin: 0 auto 14px;
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 20px;
 }
 
 .feature-icon svg {
@@ -115,21 +125,75 @@
 }
 
 .feature-card h3 {
-    font-size: var(--font-size-md);
-    margin-bottom: 7px;
+    font-size: var(--font-size-lg);
+    margin-bottom: 9px;
 }
 
 .feature-card p {
     color: var(--text-secondary);
-    font-size: var(--font-size-xs);
-    line-height: 1.45;
+    font-size: var(--font-size-sm);
+    line-height: 1.5;
 }
 
 /* ==================== FEATURED MODULES ==================== */
 .featured-modules {
-    padding: 40px 0 40px;
+    padding: 70px 0;
+    background-color: var(--bg-primary);
 }
 
+.featured-content {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.featured-text h2 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: 14px;
+}
+
+.featured-text p {
+    max-width: 380px;
+    color: var(--text-secondary);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.featured-text .btn-primary {
+    background-color: var(--orange);
+    border-radius: 6px;
+}
+
+.featured-list {
+    position: relative;
+    height: 400px;
+}
+
+.featured-list .module-card {
+    position: absolute;
+    width: 330px;
+    height: 330px;
+}
+
+.featured-list .module-card:nth-child(1) {
+    top: 60px;
+    left: 80px;
+    z-index: 3;
+}
+
+.featured-list .module-card:nth-child(2) {
+    top: 30px;
+    left: 140px;
+    z-index: 2;
+}
+
+.featured-list .module-card:nth-child(3) {
+    top: 0;
+    left: 200px;
+    z-index: 1;
+}
 
 /* ==================== HOME CTA ==================== */
 .home-cta {
