@@ -1,8 +1,9 @@
 :root {
     /* Background Colors */
-    --bg-primary: #050B18;
+    --bg-primary: #151C2B;
     --bg-secondary: #0B1425;
     --bg-tertiary: #111C31;
+    --bg-white: #F9F9FB;
 
     /* Text Colors */
     --text-primary: #F5F7FB;
