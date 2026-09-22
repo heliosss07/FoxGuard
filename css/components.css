@@ -1,5 +1,5 @@
 .container {
-    width: min(var(--container-width), 90%);
+    width: min(1120px, 90%);
     margin: 0 auto;
 }
 
@@ -13,22 +13,13 @@
     font-size: var(--font-size-base);
     font-weight: 600;
     text-align: center;
-    transition:
-        background-color var(--transition),
-        border-color var(--transition),
-        color var(--transition),
-        transform var(--transition);
-}
-
-.btn:hover {
-    transform: translateY(-1px);
+    transition: background-color var(--transition), border-color var(--transition), color var(--transition);
 }
 
 .btn-primary {
     background-color: var(--orange);
     color: var(--bg-primary);
 }
-
 .btn-primary:hover {
     background-color: var(--orange-hover);
 }
@@ -38,7 +29,6 @@
     border-color: var(--border-color);
     color: var(--text-primary);
 }
-
 .btn-secondary:hover {
     border-color: var(--orange);
     color: var(--orange);
@@ -53,10 +43,7 @@
     z-index: 100;
     background: transparent;
     border-bottom: 1px solid transparent;
-    transition:
-        background-color 0.25s ease,
-        border-color 0.25s ease,
-        backdrop-filter 0.25s ease;
+    transition: background-color 0.25s ease, border-color 0.25s ease, backdrop-filter 0.25s ease;
 }
 
 .header.scrolled {
@@ -64,6 +51,7 @@
     backdrop-filter: blur(16px);
     border-bottom-color: var(--border-color);
 }
+
 
 .navbar {
     display: flex;
@@ -101,18 +89,28 @@
     color: var(--text-secondary);
     font-size: var(--font-size-sm);
     font-weight: 500;
-    transition:
-        color var(--transition),
-        border-color var(--transition);
+    transition: color var(--transition);
 }
 
 .nav-menu a:hover {
     color: var(--text-primary);
 }
 
+/* The link of the page you are currently on */
 .nav-menu a[aria-current="page"] {
     color: var(--text-primary);
     border-bottom-color: var(--orange);
+}
+
+/* The "Menu" button only shows up on phones */
+.nav-toggle {
+    display: none;
+    padding: 8px 14px;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
 }
 
 /* ==================== SECTION HEADING ==================== */
@@ -133,21 +131,16 @@
 .section-heading.center {
     text-align: center;
 }
-
 .section-heading.center p {
     margin: 0 auto;
 }
 
-/* ==================== PAGE BANNER ==================== */
+/* ==================== PAGE BANNER (inner pages) ==================== */
 .page-banner {
-    padding: 110px 0 40px;
+    padding: 64px 0 40px;
     border-bottom: 1px solid var(--border-color);
     background:
-        radial-gradient(
-            circle at 90% 0%,
-            var(--orange-dim),
-            transparent 55%
-        ),
+        radial-gradient(circle at 90% 0%, rgb(255 107 0 / 0.18), transparent 55%),
         var(--bg-primary);
 }
 
@@ -162,7 +155,7 @@
     font-size: var(--font-size-md);
 }
 
-/* ==================== MODULE CARDS ==================== */
+/* ==================== MODULE CARD ==================== */
 .modules-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -176,20 +169,45 @@
     background-color: var(--bg-secondary);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
-    transition:
-        border-color var(--transition),
-        transform var(--transition);
+    transition: border-color var(--transition);
 }
 
 .module-card:hover {
     border-color: var(--orange);
-    transform: translateY(-3px);
 }
 
-.module-card > img {
+/* Thumbnail: a real image or a colored block with an icon */
+.module-thumb {
     width: 100%;
-    height: 190px;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
+}
+
+/* For logos that must not be cropped (Burp Suite) */
+.module-thumb.contain {
+    object-fit: contain;
+    background-color: #FF6633;
+}
+
+.module-thumb.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-tertiary);
+}
+
+.module-thumb.icon svg {
+    width: 72px;
+    height: 72px;
+    fill: none;
+    stroke: var(--teal);
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.module-thumb.icon.purple svg {
+    stroke: var(--purple);
 }
 
 .module-card-content {
@@ -225,17 +243,14 @@
     font-weight: 600;
     white-space: nowrap;
 }
-
 .module-level.beginner {
     color: var(--teal);
     border: 1px solid var(--teal);
 }
-
 .module-level.intermediate {
     color: var(--yellow);
     border: 1px solid var(--yellow);
 }
-
 .module-level.advanced {
     color: var(--red);
     border: 1px solid var(--red);
@@ -245,12 +260,17 @@
     color: var(--orange);
     font-size: var(--font-size-sm);
     font-weight: 600;
-    transition: color var(--transition);
 }
-
 .module-link:hover {
     color: var(--orange-hover);
     text-decoration: underline;
+}
+
+/* For modules that are not written yet */
+.module-status {
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
 }
 
 /* ==================== FOOTER ==================== */
@@ -287,7 +307,6 @@
 .footer-links a {
     color: var(--text-secondary);
     font-size: var(--font-size-sm);
-    transition: color var(--transition);
 }
 
 .footer-links a:hover {
@@ -305,3 +324,5 @@
     color: var(--text-secondary);
     font-size: var(--font-size-xs);
 }
+
+

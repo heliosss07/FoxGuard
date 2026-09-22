@@ -1,3 +1,7 @@
+/* Fonts. One line here means every page gets them. */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+/* ==================== RESET ==================== */
 * {
     margin: 0;
     padding: 0;
@@ -11,8 +15,14 @@ html {
 body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
-    font-family: "Space Grotesk";
-    line-height: 1.5;
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    line-height: 1.2;
 }
 
 img {
@@ -29,4 +39,16 @@ button,
 input,
 textarea {
     font: inherit;
+    color: inherit;
 }
+
+button {
+    cursor: pointer;
+}
+
+/* Visible outline when someone navigates with the keyboard */
+:focus-visible {
+    outline: 2px solid var(--orange);
+    outline-offset: 3px;
+}
+

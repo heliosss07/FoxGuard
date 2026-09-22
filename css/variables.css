@@ -42,14 +42,9 @@
     --font-size-3xl: clamp(46px, 7vw, 76px);
 
     /* Layout */
-    --container-width: 1120px;
-    --header-height: 68px;
-
-    /* Shape */
     --radius-sm: 6px;
     --radius-md: 12px;
     --radius-lg: 20px;
-
-    /* Motion */
+    --header-height: 68px;
     --transition: 0.2s ease;
 }

@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function setupHeaderScroll() {
     const header = document.querySelector(".header");
-
     if (!header) return;
 
     const updateHeader = () => {
@@ -13,8 +12,5 @@ function setupHeaderScroll() {
     };
 
     updateHeader();
-
-    window.addEventListener("scroll", updateHeader, {
-        passive: true
-    });
+    window.addEventListener("scroll", updateHeader, { passive: true });
 }
