@@ -1,38 +1,55 @@
 :root {
-    /* Background Colors */
-    --bg-primary: #151C2B;
-    --bg-secondary: #0B1425;
-    --bg-tertiary: #111C31;
+    /* Backgrounds */
+    --bg-primary: #020305;
+    --bg-secondary: #010204;
+    --bg-tertiary: #06090D;
     --bg-white: #F9F9FB;
 
-    /* Text Colors */
-    --text-primary: #F5F7FB;
-    --text-secondary: #A6AFC0;
+    /* Text */
+    --text-primary: #F5F5F2;
+    --text-secondary: #929AA5;
+    --text-dark: #151C2B;
+    --text-dark-muted: #5F6675;
 
-    /* Border */
-    --border-color: #24324A;
+    /* Borders */
+    --border-color: #1A222B;
+    --border-light: #D7DAE0;
 
     /* Accent Colors */
-    --blue: #315CFF;
-    --purple: #7C3AED;
+    --blue: #3B82F6;
+    --purple: #8B5CF6;
     --orange: #FF6B00;
-    --teal: #55B8AA;
-    --red: #FF7676;
+    --orange-hover: #FF8533;
+    --orange-dim: rgb(255 107 0 / 0.15);
+    --orange-glow: rgb(255 107 0 / 0.45);
+    --teal: #38BDF8;
+    --red: #FF5B4D;
     --yellow: #F1E69D;
 
-    /* Typography */
-    --font-size-xs: 10px;
-    --font-size-sm: 12px;
-    --font-size-base: 14px;
-    --font-size-md: 16px;
-    --font-size-lg: 18px;
-    --font-size-xl: 24px;
-    --font-size-2xl: 36px;
-    --font-size-3xl: 42px;
+    /* Fonts */
+    --font-display: "Space Grotesk", system-ui, sans-serif;
+    --font-body: "Space Grotesk", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", "Courier New", monospace;
 
-    /* Font Weights */
-    --font-weight-regular: 400;
-    --font-weight-medium: 500;
-    --font-weight-semibold: 600;
-    --font-weight-bold: 700;
+    /* Font Sizes */
+    --font-size-xs: 12px;
+    --font-size-sm: 14px;
+    --font-size-base: 16px;
+    --font-size-md: 18px;
+    --font-size-lg: 20px;
+    --font-size-xl: 28px;
+    --font-size-2xl: clamp(32px, 5vw, 48px);
+    --font-size-3xl: clamp(46px, 7vw, 76px);
+
+    /* Layout */
+    --container-width: 1120px;
+    --header-height: 68px;
+
+    /* Shape */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+
+    /* Motion */
+    --transition: 0.2s ease;
 }
