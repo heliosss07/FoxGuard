@@ -3,42 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse FoxGuard cybersecurity modules from beginner to advanced.">
     <title>Modules | FoxGuard</title>
+    <link rel="icon" href="images/logo/FoxLogo.svg">
 
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/modules.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
     <!-- ==================== HEADER ==================== -->
     <header class="header">
         <div class="container">
             <nav class="navbar">
-
                 <a href="index.html" class="logo">
-                    <img src="images/logo/FoxLogo.svg" alt="FoxGuard logo">
+                    <img src="images/logo/FoxLogo.svg" alt="">
                     <span>FOXGUARD</span>
                 </a>
 
-                <div class="nav-menu">
-                    <a href="index.html" class="active">Home</a>
-                    <a href="modules.html">Module</a>
+                <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">Menu</button>
+
+                <div class="nav-menu" id="nav-menu">
+                    <a href="index.html">Home</a>
+                    <a href="modules.html" aria-current="page">Modules</a>
                     <a href="about.html">About</a>
                 </div>
             </nav>
         </div>
     </header>
+
     <!-- ==================== MAIN ==================== -->
     <main>
-       
+        <section class="page-banner">
+            <div class="container">
+                <h1>Modules</h1>
+                <p>Pick a topic and work through it at your own pace. One module is open now and more are on the way.</p>
+            </div>
+        </section>
+
+        <section class="modules-section">
+            <div class="container">
+
+                <!-- Filter buttons and search box. main.js makes them work. -->
+                <div class="modules-toolbar">
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="beginner">Beginner</button>
+                        <button class="filter-btn" data-filter="intermediate">Intermediate</button>
+                        <button class="filter-btn" data-filter="advanced">Advanced</button>
+                    </div>
+
+                    <input type="search" class="search-input" id="module-search"
+                           placeholder="Search modules" aria-label="Search modules">
+                </div>
+
+                <!-- data-level is what the filter buttons look at -->
+                <div class="modules-grid" id="modules-grid">
+
+                    <article class="module-card" data-level="beginner">
+                        <img class="module-thumb" src="images/modules/linux.jpg" alt="Linux">
+                        <div class="module-card-content">
+                            <div class="module-title">
+                                <h3>Linux Essentials</h3>
+                                <span class="module-level beginner">Beginner</span>
+                            </div>
+                            <p>Get comfortable in the terminal: move around, set permissions, and read logs.</p>
+                            <a href="course.html" class="module-link">Start module</a>
+                        </div>
+                    </article>
+
+                    <article class="module-card" data-level="beginner">
+                        <img class="module-thumb" src="images/modules/Security+.webp" alt="ComptiaSecurity">
+                        <div class="module-card-content">
+                            <div class="module-title">
+                                <h3>Cybersecurity Fundamentals</h3>
+                                <span class="module-level beginner">Beginner</span>
+                            </div>
+                            <p>Threats, the CIA triad, and how attacks actually happen, in plain language.</p>
+                            <span class="module-status">Coming soon</span>
+                        </div>
+                    </article>
+
+                    <article class="module-card" data-level="beginner">
+                        <img class="module-thumb" src="images/modules/python.jpg" alt="Python logo">
+                        <div class="module-card-content">
+                            <div class="module-title">
+                                <h3>Python for Security</h3>
+                                <span class="module-level beginner">Beginner</span>
+                            </div>
+                            <p>Write small scripts to parse logs, hash files, and automate boring checks.</p>
+                            <span class="module-status">Coming soon</span>
+                        </div>
+                    </article>
+
+                    <article class="module-card" data-level="intermediate">
+                        <img class="module-thumb" src="images/modules/ccna.jpg" alt="Cisco CCNA badge">
+                        <div class="module-card-content">
+                            <div class="module-title">
+                                <h3>CCNA Networking</h3>
+                                <span class="module-level intermediate">Intermediate</span>
+                            </div>
+                            <p>Understand IP addressing, routing, and how devices talk to each other across networks.</p>
+                            <span class="module-status">Coming soon</span>
+                        </div>
+                    </article>
+
+                    <article class="module-card" data-level="intermediate">
+                        <img class="module-thumb" src="images/modules/wireshark.png" alt="Wireshark logo">
+                        <div class="module-card-content">
+                            <div class="module-title">
+                                <h3>Wireshark</h3>
+                                <span class="module-level intermediate">Intermediate</span>
+                            </div>
+                            <p>Capture network traffic and learn to read packets, filters, and common protocols.</p>
+                            <span class="module-status">Coming soon</span>
+                        </div>
+                    </article>
+
+                    <article class="module-card" data-level="advanced">
+                        <img class="module-thumb" src="images/modules/burp-suite.png" alt="Burp Suite logo">
+                        <div class="module-card-content">
+                            <div class="module-title">
+                                <h3>Web Penetration</h3>
+                                <span class="module-level advanced">Advanced</span>
+                            </div>
+                            <p>Find and understand common web flaws like SQL injection and XSS with Burp Suite.</p>
+                            <span class="module-status">Coming soon</span>
+                        </div>
+                    </article>
+
+                    <article class="module-card" data-level="advanced">
+                        <img class="module-thumb" src="images/modules/kali.png" alt="kali logo">
+                        <div class="module-card-content">
+                            <div class="module-title">
+                                <h3>Kali Linux</h3>
+                                <span class="module-level advanced">Advanced</span>
+                            </div>
+                            <p>Use Kali Linux as an OS to get access to cybersecurity tools such as Nmap, Hydra, etc..</p>
+                            <span class="module-status">Coming soon</span>
+                        </div>
+                    </article>
+
+                </div>
+
+                <p class="no-results" id="no-results" hidden>
+                    No modules match that. Try a different word or choose "All".
+                </p>
+            </div>
+        </section>
     </main>
-    
+
     <!-- ==================== FOOTER ==================== -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-
                 <div class="footer-brand">
                     <h3>FOXGUARD</h3>
                     <p>Learn. Practice. Defend.</p>
@@ -49,7 +169,6 @@
                     <a href="modules.html">Modules</a>
                     <a href="about.html">About</a>
                 </div>
-
             </div>
 
             <div class="footer-bottom">
