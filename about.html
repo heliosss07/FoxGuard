@@ -3,42 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="What FoxGuard is, how the modules work, and the ground rules for practicing safely.">
     <title>About | FoxGuard</title>
+    <link rel="icon" href="images/logo/FoxLogo.svg">
 
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/about.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
     <!-- ==================== HEADER ==================== -->
     <header class="header">
         <div class="container">
             <nav class="navbar">
-
                 <a href="index.html" class="logo">
-                    <img src="images/logo/FoxLogo.svg" alt="FoxGuard logo">
+                    <img src="images/logo/FoxLogo.svg" alt="">
                     <span>FOXGUARD</span>
                 </a>
 
-                <div class="nav-menu">
-                    <a href="index.html" class="active">Home</a>
-                    <a href="modules.html">Module</a>
-                    <a href="about.html">About</a>
+                <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">Menu</button>
+
+                <div class="nav-menu" id="nav-menu">
+                    <a href="index.html">Home</a>
+                    <a href="modules.html">Modules</a>
+                    <a href="about.html" aria-current="page">About</a>
                 </div>
             </nav>
         </div>
     </header>
+
     <!-- ==================== MAIN ==================== -->
     <main>
-       
+        <section class="page-banner">
+            <div class="container">
+                <h1>About FoxGuard</h1>
+                <p>A cybersecurity learning site built by students for people who are starting from zero.</p>
+            </div>
+        </section>
+
+        <!-- Why -->
+        <section class="about-section">
+            <div class="container about-row">
+                <h2>Why FoxGuard exists</h2>
+                <div class="about-text">
+                    <p>
+                        A lot of cybersecurity material assumes you already know the basics.
+                        FoxGuard does not. Each lesson explains one idea in plain language,
+                        shows the command or tool, and then tells you why it matters for
+                        defending or testing a system.
+                    </p>
+                    <p>
+                        This is an early project. One module is open right now and the rest
+                        are still being written, which is why some cards say "Coming soon".
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How a module works. This really is a sequence, so the steps are numbered. -->
+        <section class="about-section">
+            <div class="container about-row">
+                <h2>How a module works</h2>
+                <ol class="steps">
+                    <li>
+                        <h3>Read the lesson</h3>
+                        <p>Each lesson is short and covers one topic, with examples you can copy.</p>
+                    </li>
+                    <li>
+                        <h3>Try it yourself</h3>
+                        <p>Every lesson ends with a few things to do in your own terminal. Typing the commands is where it sticks.</p>
+                    </li>
+                    <li>
+                        <h3>Take the quiz</h3>
+                        <p>When you finish the lessons, a short quiz checks what you understood and explains every answer.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Progress -->
+        <section class="about-section">
+            <div class="container about-row">
+                <h2>Progress and privacy</h2>
+                <div class="about-text">
+                    <p>
+                        There are no accounts and no server. Your progress is saved in your own
+                        browser. That means it stays private, but it also means clearing your
+                        browser data or switching devices will reset it.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ground rules -->
+        <section class="about-section">
+            <div class="container about-row">
+                <h2>Ground rules</h2>
+                <div class="notice">
+                    <h3>Only practice on systems you own or have permission to test</h3>
+                    <p>
+                        The tools you will learn here can cause real damage when pointed at systems
+                        that are not yours. Use your own machine, a virtual machine, or a platform
+                        made for practice. Testing someone else's system without written permission
+                        is illegal in most countries.
+                    </p>
+                </div>
+            </div>
+        </section>
     </main>
-    
+
     <!-- ==================== FOOTER ==================== -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-
                 <div class="footer-brand">
                     <h3>FOXGUARD</h3>
                     <p>Learn. Practice. Defend.</p>
@@ -49,7 +128,6 @@
                     <a href="modules.html">Modules</a>
                     <a href="about.html">About</a>
                 </div>
-
             </div>
 
             <div class="footer-bottom">

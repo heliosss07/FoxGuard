@@ -1,0 +1,90 @@
+.about-section {
+    padding: 64px 0;
+}
+
+.about-section + .about-section {
+    border-top: 1px solid var(--border-color);
+}
+
+/* Two columns: title on the left, text on the right */
+.about-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 48px;
+}
+
+.about-row h2 {
+    font-size: var(--font-size-xl);
+}
+
+.about-text p {
+    max-width: 65ch;
+    margin-bottom: 16px;
+    color: var(--text-secondary);
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* ---------- The three steps of a module ---------- */
+.steps {
+    display: grid;
+    gap: 20px;
+    list-style: none;
+    counter-reset: step;
+}
+
+.steps li {
+    position: relative;
+    padding-left: 56px;
+    counter-increment: step;
+}
+
+/* The number comes from the counter above, not from the HTML */
+.steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--orange);
+    border-radius: 50%;
+    color: var(--orange);
+    font-family: var(--font-display);
+    font-weight: 700;
+}
+
+.steps h3 {
+    margin-bottom: 4px;
+    font-size: var(--font-size-md);
+}
+
+.steps p {
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+/* ---------- Warning box ---------- */
+.notice {
+    padding: 20px 24px;
+    background-color: var(--bg-secondary);
+    border-left: 4px solid var(--orange);
+    border-radius: var(--radius-sm);
+}
+
+.notice h3 {
+    margin-bottom: 6px;
+    font-size: var(--font-size-md);
+}
+
+.notice p {
+    max-width: 65ch;
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+}
+
