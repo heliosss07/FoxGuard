@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     setupHeaderScroll();
     setupModuleFilters();
+    setupCourse();
 });
 
 
@@ -60,4 +61,43 @@ function setupModuleFilters() {
     if (searchInput) {
         searchInput.addEventListener("input", applyFilters);
     }
+}
+
+function setupCourse() {
+    const lessons = document.querySelectorAll(".lesson");
+    if (lessons.length === 0) return;
+
+    const lessonButtons = document.querySelectorAll(".lesson-btn");
+
+    function showLesson(number) {
+        lessons.forEach((lesson) => {
+            lesson.hidden = lesson.dataset.lesson !== number;
+        });
+
+        lessonButtons.forEach((button) => {
+            button.setAttribute("aria-current", button.dataset.lesson === number);
+        });
+
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    lessonButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            showLesson(button.dataset.lesson);
+        });
+    });
+
+    document.querySelectorAll(".next-lesson").forEach((button) => {
+        button.addEventListener("click", () => {
+            showLesson(button.dataset.next);
+        });
+    });
+
+    document.querySelectorAll(".prev-lesson").forEach((button) => {
+        button.addEventListener("click", () => {
+            showLesson(button.dataset.prev);
+        });
+    });
+
+    showLesson("1");
 }

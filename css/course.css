@@ -1,0 +1,232 @@
+.breadcrumb {
+    margin-bottom: 16px;
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+.breadcrumb a:hover {
+    color: var(--orange);
+    text-decoration: underline;
+}
+
+.course-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    margin-top: 20px;
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+/* ==================== LAYOUT ==================== */
+.course-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    align-items: start;
+    gap: 48px;
+    padding: 40px 0 88px;
+}
+
+.course-sidebar {
+    position: sticky;
+    top: calc(var(--header-height) + 24px);
+}
+
+/* ==================== LESSON LIST ==================== */
+.lesson-list {
+    display: grid;
+    gap: 4px;
+    list-style: none;
+}
+
+.lesson-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 12px 14px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+    text-align: left;
+    transition: background-color var(--transition), color var(--transition);
+}
+
+.lesson-btn:hover {
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+/* The lesson you are reading now */
+.lesson-btn[aria-current="true"] {
+    background-color: var(--bg-tertiary);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+/* Small circle in front of each lesson */
+.lesson-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid var(--border-color);
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+
+/* ==================== LESSON CONTENT ==================== */
+.lesson {
+    max-width: 720px;
+    color: #D3D9E6;
+}
+
+.lesson[hidden] {
+    display: none;
+}
+
+.lesson-count {
+    margin-bottom: 8px;
+    color: var(--orange);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+}
+
+.lesson h2 {
+    margin-bottom: 20px;
+    color: var(--text-primary);
+    font-size: var(--font-size-2xl);
+}
+
+.lesson h3 {
+    margin: 36px 0 12px;
+    color: var(--text-primary);
+    font-size: var(--font-size-lg);
+}
+
+.lesson p {
+    margin-bottom: 16px;
+}
+
+.lesson ul {
+    margin: 0 0 16px 22px;
+}
+
+.lesson li {
+    margin-bottom: 6px;
+}
+
+.lesson strong {
+    color: var(--text-primary);
+}
+
+/* Inline code, like `cd` */
+.lesson code {
+    padding: 2px 6px;
+    background-color: var(--bg-tertiary);
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+}
+
+/* Code blocks */
+.lesson pre {
+    margin-bottom: 20px;
+    padding: 16px 18px;
+    overflow-x: auto;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    font-family: var(--font-mono);
+    font-size: var(--font-size-sm);
+    line-height: 1.8;
+}
+
+.lesson pre code {
+    padding: 0;
+    background: none;
+    font-size: inherit;
+}
+
+.prompt {
+    color: var(--orange);
+    user-select: none;
+}
+
+.output {
+    color: var(--text-secondary);
+}
+
+/* Table of permission numbers */
+.table-wrap {
+    margin-bottom: 20px;
+    overflow-x: auto;
+}
+
+.lesson table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--font-size-sm);
+}
+
+.lesson th,
+.lesson td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border-color);
+    text-align: left;
+}
+
+.lesson th {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* ---------- Boxes inside a lesson ---------- */
+.callout,
+.try-it {
+    margin: 28px 0;
+    padding: 18px 22px;
+    background-color: var(--bg-secondary);
+    border-left: 4px solid var(--teal);
+    border-radius: var(--radius-sm);
+}
+
+.try-it {
+    border-left-color: var(--orange);
+}
+
+.callout h3,
+.try-it h3 {
+    margin: 0 0 8px;
+    font-size: var(--font-size-md);
+}
+
+.callout p:last-child,
+.try-it ul:last-child {
+    margin-bottom: 0;
+}
+
+/* ---------- Buttons under each lesson ---------- */
+.lesson-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-color);
+}
+
+.lesson-nav-right {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}

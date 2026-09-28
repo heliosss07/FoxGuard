@@ -3,42 +3,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course | FoxGuard</title>
+    <meta name="description" content="Linux Essentials: a beginner module on the FoxGuard cybersecurity platform.">
+    <title>Linux Essentials | FoxGuard</title>
+    <link rel="icon" href="images/logo/FoxLogo.svg">
 
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/course.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
     <!-- ==================== HEADER ==================== -->
     <header class="header">
         <div class="container">
             <nav class="navbar">
-
                 <a href="index.html" class="logo">
-                    <img src="images/logo/FoxLogo.svg" alt="FoxGuard logo">
+                    <img src="images/logo/FoxLogo.svg" alt="">
                     <span>FOXGUARD</span>
                 </a>
 
-                <div class="nav-menu">
-                    <a href="index.html" class="active">Home</a>
-                    <a href="modules.html">Module</a>
+                <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">Menu</button>
+
+                <div class="nav-menu" id="nav-menu">
+                    <a href="index.html">Home</a>
+                    <a href="modules.html" aria-current="page">Modules</a>
                     <a href="about.html">About</a>
                 </div>
             </nav>
         </div>
     </header>
+
     <!-- ==================== MAIN ==================== -->
     <main>
-       
+        <section class="page-banner">
+            <div class="container">
+                <p class="breadcrumb"><a href="modules.html">Modules</a> / Linux Essentials</p>
+                <h1>Linux Essentials</h1>
+                <p>Move around the file system, understand permissions, and read logs from the command line.</p>
+                <div class="course-meta">
+                    <span class="module-level beginner">Beginner</span>
+                    <span>3 lessons</span>
+                    <span>~35 min</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="container course-layout">
+            <!-- ==================== SIDEBAR ==================== -->
+            <aside class="course-sidebar">
+                <ul class="lesson-list" id="lesson-list">
+                    <li>
+                        <button class="lesson-btn" data-lesson="1" aria-current="true">
+                            <span class="lesson-check"></span> Finding your way around
+                        </button>
+                    </li>
+                    <li>
+                        <button class="lesson-btn" data-lesson="2">
+                            <span class="lesson-check"></span> Files and permissions
+                        </button>
+                    </li>
+                    <li>
+                        <button class="lesson-btn" data-lesson="3">
+                            <span class="lesson-check"></span> Searching and logs
+                        </button>
+                    </li>
+                </ul>
+            </aside>
+
+            <!-- ==================== LESSON 1 ==================== -->
+            <article class="lesson" data-lesson="1">
+                <p class="lesson-count">Lesson 1 of 3</p>
+                <h2>Finding your way around</h2>
+
+                <p>
+                    Almost every security tool assumes you are comfortable in a terminal.
+                    Before touching any tool, you need to be able to move around the file
+                    system without a mouse.
+                </p>
+
+                <h3>Where are you?</h3>
+                <p>
+                    <code>pwd</code> prints your current location. <code>ls</code> lists
+                    what is in it. <code>cd</code> changes it.
+                </p>
+
+                <pre><code><span class="prompt">$</span> pwd
+                <span class="output">/home/student</span>   
+                <span class="prompt">$</span> ls
+                <span class="output">Desktop  Documents  Downloads  tools</span>
+                <span class="prompt">$</span> cd tools
+                <span class="prompt">$</span> pwd
+                <span class="output">/home/student/tools</span></code></pre>
+
+                <h3>Shortcuts worth knowing</h3>
+                <ul>
+                    <li><code>cd ..</code> goes up one folder</li>
+                    <li><code>cd ~</code> jumps straight to your home folder</li>
+                    <li><code>cd -</code> jumps back to wherever you just came from</li>
+                </ul>
+
+                <div class="try-it">
+                    <h3>Try it yourself</h3>
+                    <ul>
+                        <li>Open a terminal and run <code>pwd</code></li>
+                        <li>List the files in your home folder with <code>ls</code></li>
+                        <li>Move into any folder, then back out with <code>cd ..</code></li>
+                    </ul>
+                </div>
+
+                <div class="lesson-nav">
+                    <span></span>
+                    <div class="lesson-nav-right">
+                        <button class="btn btn-primary next-lesson" data-next="2">Next lesson</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ==================== LESSON 2 ==================== -->
+            <article class="lesson" data-lesson="2" hidden>
+                <p class="lesson-count">Lesson 2 of 3</p>
+                <h2>Files and permissions</h2>
+
+                <p>
+                    Every file on Linux has an owner, a group, and a set of permissions.
+                    Misconfigured permissions are one of the most common ways attackers
+                    get access they should not have, so reading them correctly matters.
+                </p>
+
+                <h3>Reading ls -l</h3>
+                <pre><code><span class="prompt">$</span> ls -l notes.txt
+                <span class="output">-rw-r--r-- 1 student student 220 Sep 12 09:14 notes.txt</span></code></pre>
+                <p>
+                    The first character says the type (<code>-</code> for a normal file,
+                    <code>d</code> for a folder). The next nine characters are three
+                    groups of three: what the <strong>owner</strong>, the
+                    <strong>group</strong>, and <strong>everyone else</strong> can do.
+                    Each group is read (<code>r</code>), write (<code>w</code>), execute (<code>x</code>).
+                </p>
+
+                <h3>Permissions as numbers</h3>
+                <p>
+                    <code>chmod</code> also accepts permissions as a three digit number.
+                    Each digit adds up read (4), write (2), and execute (1).
+                </p>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>Number</th><th>Permissions</th><th>Meaning</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>7</td><td>rwx</td><td>read, write, and execute</td></tr>
+                            <tr><td>6</td><td>rw-</td><td>read and write</td></tr>
+                            <tr><td>5</td><td>r-x</td><td>read and execute</td></tr>
+                            <tr><td>4</td><td>r--</td><td>read only</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <pre><code><span class="prompt">$</span> chmod 644 notes.txt</code></pre>
+                <p>That sets read and write for the owner, and read only for everyone else, which is a safe default for a personal file.</p>
+
+                <div class="callout">
+                    <h3>Why this matters</h3>
+                    <p>A script or key file that is writable or readable by everyone is a common finding in real security audits. Locking down permissions is one of the cheapest fixes there is.</p>
+                </div>
+
+                <div class="lesson-nav">
+                    <button class="btn btn-secondary prev-lesson" data-prev="1">Previous</button>
+                    <div class="lesson-nav-right">
+                        <button class="btn btn-primary next-lesson" data-next="3">Next lesson</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ==================== LESSON 3 ==================== -->
+            <article class="lesson" data-lesson="3" hidden>
+                <p class="lesson-count">Lesson 3 of 3</p>
+                <h2>Searching and logs</h2>
+
+                <p>
+                    When something goes wrong on a system, the answer is usually already
+                    written down somewhere in a log file. Finding it fast is a core skill.
+                </p>
+
+                <h3>Finding files</h3>
+                <pre><code><span class="prompt">$</span> find / -name "*.conf" 2&gt;/dev/null
+                <span class="output">/etc/ssh/sshd_config.conf</span>
+                <span class="output">/etc/nginx/nginx.conf</span></code></pre>
+                <p><code>find</code> searches by name, type, size, or when a file was changed. The <code>2&gt;/dev/null</code> part just hides "permission denied" noise.</p>
+
+                <h3>Searching inside files</h3>
+                <pre><code><span class="prompt">$</span> grep "Failed password" /var/log/auth.log
+                <span class="output">Feb 14 03:12:41 sshd: Failed password for root from 203.0.113.9</span></code></pre>
+                <p><code>grep</code> searches the content of a file for a word or pattern. This one line is how you would start noticing repeated failed login attempts on a server.</p>
+
+                <h3>Watching a log as it grows</h3>
+                <pre><code><span class="prompt">$</span> tail -f /var/log/auth.log</code></pre>
+                <p><code>tail -f</code> shows the end of a file and keeps updating as new lines are added, useful while you are actively watching for something.</p>
+
+                <div class="try-it">
+                    <h3>Try it yourself</h3>
+                    <ul>
+                        <li>Use <code>find</code> to look for a file type you know you have, like <code>*.jpg</code></li>
+                        <li>Use <code>grep</code> to search for a word inside a text file</li>
+                    </ul>
+                </div>
+
+                <div class="lesson-nav">
+                    <button class="btn btn-secondary prev-lesson" data-prev="2">Previous</button>
+                    <div class="lesson-nav-right">
+                        <a class="btn btn-primary" href="modules.html">Back to modules</a>
+                    </div>
+                </div>
+            </article>
+        </div>
     </main>
-    
+
     <!-- ==================== FOOTER ==================== -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-
                 <div class="footer-brand">
                     <h3>FOXGUARD</h3>
                     <p>Learn. Practice. Defend.</p>
@@ -49,7 +235,6 @@
                     <a href="modules.html">Modules</a>
                     <a href="about.html">About</a>
                 </div>
-
             </div>
 
             <div class="footer-bottom">
