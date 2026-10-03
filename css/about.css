@@ -88,3 +88,10 @@
     font-size: var(--font-size-sm);
 }
 
+/* Small Tablet / Mobile View */
+@media (max-width: 768px) {
+    .about-row {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}

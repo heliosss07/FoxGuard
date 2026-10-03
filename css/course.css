@@ -230,3 +230,14 @@
     flex-wrap: wrap;
     gap: 12px;
 }
+
+/* Small Tablet / Mobile View */
+@media (max-width: 768px) {
+    .course-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .course-sidebar {
+        position: static; /* Removes the sticky behavior */
+    }
+}

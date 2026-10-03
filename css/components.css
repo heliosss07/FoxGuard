@@ -326,3 +326,9 @@
 }
 
 
+/* Tablet View */
+@media (max-width: 992px) {
+    .modules-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
