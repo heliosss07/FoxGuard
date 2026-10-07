@@ -1,9 +1,41 @@
 document.addEventListener("DOMContentLoaded", () => {
     setupHeaderScroll();
+    setupMobileNavigation();
     setupModuleFilters();
     setupCourse();
 });
 
+
+
+function setupMobileNavigation() {
+    const toggle = document.querySelector(".nav-toggle");
+    const menu = document.querySelector(".nav-menu");
+    if (!toggle || !menu) return;
+
+    const closeMenu = () => {
+        menu.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.textContent = "Menu";
+    };
+
+    toggle.addEventListener("click", () => {
+        const isOpen = menu.classList.toggle("open");
+        toggle.setAttribute("aria-expanded", String(isOpen));
+        toggle.textContent = isOpen ? "Close" : "Menu";
+    });
+
+    menu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", closeMenu);
+    });
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 768) closeMenu();
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") closeMenu();
+    });
+}
 
 function setupHeaderScroll() {
     const header = document.querySelector(".header");

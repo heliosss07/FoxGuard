@@ -241,3 +241,58 @@
         position: static; /* Removes the sticky behavior */
     }
 }
+@media (max-width: 768px) {
+    .course-layout {
+        gap: 28px;
+        padding: 32px 0 64px;
+    }
+
+    .course-sidebar {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 4px;
+    }
+
+    .lesson-list {
+        display: flex;
+        width: max-content;
+        max-width: none;
+        gap: 8px;
+    }
+
+    .lesson-btn {
+        width: auto;
+        min-width: max-content;
+        padding: 10px 12px;
+        border-color: var(--border-color);
+    }
+
+    .lesson {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .lesson h2 {
+        font-size: clamp(28px, 9vw, 40px);
+    }
+
+    .lesson pre {
+        padding: 14px;
+        font-size: 12px;
+    }
+
+    .callout,
+    .try-it {
+        padding: 16px 18px;
+    }
+
+    .lesson-nav,
+    .lesson-nav-right {
+        width: 100%;
+    }
+
+    .lesson-nav .btn,
+    .lesson-nav-right .btn {
+        flex: 1 1 140px;
+    }
+}
