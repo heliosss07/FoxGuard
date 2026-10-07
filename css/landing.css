@@ -770,3 +770,138 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
+/* ==================== PHONE VIEW ==================== */
+@media (max-width: 768px) {
+    .hero {
+        padding: 96px 0 64px;
+    }
+
+    .hero-content {
+        gap: 36px;
+    }
+
+    .hero-badge {
+        max-width: 100%;
+        margin-bottom: 18px;
+        font-size: 11px;
+    }
+
+    .hero-text h1 {
+        max-width: 100%;
+        margin-bottom: 16px;
+        font-size: clamp(42px, 13vw, 62px);
+        line-height: 1.02;
+    }
+
+    .hero-text p {
+        margin-bottom: 26px;
+        font-size: 17px;
+    }
+
+    .hero-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        padding-inline: 14px;
+    }
+
+    .radar-hud {
+        width: 100%;
+        max-width: 560px;
+        margin: 0 auto;
+    }
+
+    .hud-topbar {
+        padding: 10px 12px;
+    }
+
+    .box-radar {
+        min-height: 190px;
+        aspect-ratio: 1.55 / 1;
+        background-size: 34px 34px;
+    }
+
+    .features,
+    .featured-modules,
+    .tools,
+    .cta {
+        padding: 56px 0;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 26px;
+    }
+
+    .feature {
+        padding-top: 18px;
+    }
+
+    .feature p,
+    .featured-modules .section-heading p,
+    .tools .section-heading p {
+        font-size: 15px;
+    }
+
+    .featured-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        margin-bottom: 28px;
+    }
+
+    .featured-header .btn {
+        width: 100%;
+    }
+
+    .marquee-track {
+        gap: 50px;
+    }
+
+    .marquee-set {
+        gap: 12px;
+        padding-right: 50px;
+    }
+
+    .marquee-item {
+        min-width: 135px;
+    }
+
+    .marquee-item img {
+        height: 105px;
+    }
+
+    .cta-panel {
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .hud-event {
+        grid-template-columns: 62px 1fr 28px;
+        gap: 8px;
+        font-size: 9px;
+    }
+
+    .radar-label {
+        font-size: 7px;
+    }
+}
+
+@media (max-width: 420px) {
+    .features .section-heading h2,
+    .featured-modules .section-heading h2,
+    .tools .section-heading h2,
+    .cta-panel h2 {
+        font-size: 26px;
+        line-height: 1.1;
+        overflow-wrap: break-word;
+    }
+}
